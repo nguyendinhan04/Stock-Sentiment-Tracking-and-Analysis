@@ -1,0 +1,172 @@
+[2025-04-05T16:50:53.240+0000] {processor.py:161} INFO - Started process (PID=5147) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:50:53.241+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:50:53.242+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:50:53.242+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:50:53.268+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:50:53.264+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 8, in <module>
+    start = EmptyOperator(
+NameError: name 'EmptyOperator' is not defined
+[2025-04-05T16:50:53.269+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:50:53.288+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.051 seconds
+[2025-04-05T16:51:07.737+0000] {processor.py:161} INFO - Started process (PID=5274) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:07.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:51:07.741+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:51:07.740+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:07.765+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:51:07.762+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:51:07.767+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:07.786+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.052 seconds
+[2025-04-05T16:51:38.186+0000] {processor.py:161} INFO - Started process (PID=5526) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:38.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:51:38.189+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:51:38.188+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:38.201+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:51:38.198+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:51:38.202+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:51:38.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.039 seconds
+[2025-04-05T16:52:08.456+0000] {processor.py:161} INFO - Started process (PID=5778) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:08.458+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:52:08.459+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:52:08.458+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:08.475+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:52:08.470+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:52:08.477+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:08.505+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.054 seconds
+[2025-04-05T16:52:38.824+0000] {processor.py:161} INFO - Started process (PID=6030) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:38.826+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:52:38.827+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:52:38.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:38.853+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:52:38.850+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:52:38.854+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:52:38.876+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.058 seconds
+[2025-04-05T16:53:09.020+0000] {processor.py:161} INFO - Started process (PID=6283) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:09.021+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:53:09.022+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:53:09.022+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:09.035+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:53:09.033+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:53:09.036+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:09.053+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.036 seconds
+[2025-04-05T16:53:39.364+0000] {processor.py:161} INFO - Started process (PID=6535) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:39.365+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:53:39.366+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:53:39.365+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:39.375+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:53:39.373+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:53:39.375+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:53:39.394+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.034 seconds
+[2025-04-05T16:54:09.531+0000] {processor.py:161} INFO - Started process (PID=6787) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:09.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:54:09.533+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:54:09.533+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:09.543+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:54:09.541+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:54:09.544+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:09.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.032 seconds
+[2025-04-05T16:54:39.862+0000] {processor.py:161} INFO - Started process (PID=7039) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:39.863+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:54:39.864+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:54:39.864+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:39.873+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:54:39.871+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:54:39.874+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:54:39.892+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.034 seconds
+[2025-04-05T16:55:09.995+0000] {processor.py:161} INFO - Started process (PID=7291) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:09.996+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:55:09.997+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:09.996+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:10.009+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:10.007+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/test_dags.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_dags.py", line 5, in <module>
+    with DAG('test_dag',start_date=datetime(2025,1,1),schedule_interval = '@daily',catchup=False) as dag:
+NameError: name 'datetime' is not defined
+[2025-04-05T16:55:10.010+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:10.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.038 seconds
+[2025-04-05T16:55:17.152+0000] {processor.py:161} INFO - Started process (PID=7376) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:17.153+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:55:17.154+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.154+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:17.175+0000] {processor.py:840} INFO - DAG(s) 'test_dag' retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:17.262+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.262+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:test_dag
+[2025-04-05T16:55:17.278+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.277+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:test_dag
+[2025-04-05T16:55:17.288+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.287+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:test_dag
+[2025-04-05T16:55:17.289+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.288+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-05T16:55:17.300+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.300+0000] {dag.py:3058} INFO - Creating ORM DAG for test_dag
+[2025-04-05T16:55:17.313+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:17.313+0000] {dag.py:3823} INFO - Setting next_dagrun for test_dag to 2025-04-04 00:00:00+00:00, run_after=2025-04-05 00:00:00+00:00
+[2025-04-05T16:55:17.337+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.187 seconds
+[2025-04-05T16:55:47.594+0000] {processor.py:161} INFO - Started process (PID=7628) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:47.595+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:55:47.596+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:47.596+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:47.609+0000] {processor.py:840} INFO - DAG(s) 'test_dag' retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:55:47.626+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:47.626+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-05T16:55:47.647+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:55:47.646+0000] {dag.py:3823} INFO - Setting next_dagrun for test_dag to 2025-04-05 00:00:00+00:00, run_after=2025-04-06 00:00:00+00:00
+[2025-04-05T16:55:47.674+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.082 seconds
+[2025-04-05T16:56:17.813+0000] {processor.py:161} INFO - Started process (PID=7880) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:17.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:56:17.815+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:17.815+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:17.848+0000] {processor.py:840} INFO - DAG(s) 'test_dag' retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:17.866+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:17.865+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-05T16:56:17.889+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:17.889+0000] {dag.py:3823} INFO - Setting next_dagrun for test_dag to 2025-04-05 00:00:00+00:00, run_after=2025-04-06 00:00:00+00:00
+[2025-04-05T16:56:17.908+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.097 seconds
+[2025-04-05T16:56:48.036+0000] {processor.py:161} INFO - Started process (PID=8132) to work on /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:48.037+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/test_dags.py for tasks to queue
+[2025-04-05T16:56:48.038+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:48.037+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:48.050+0000] {processor.py:840} INFO - DAG(s) 'test_dag' retrieved from /opt/airflow/dags/test_dags.py
+[2025-04-05T16:56:48.067+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:48.067+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-05T16:56:48.087+0000] {logging_mixin.py:188} INFO - [2025-04-05T16:56:48.087+0000] {dag.py:3823} INFO - Setting next_dagrun for test_dag to 2025-04-05 00:00:00+00:00, run_after=2025-04-06 00:00:00+00:00
+[2025-04-05T16:56:48.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/test_dags.py took 0.074 seconds

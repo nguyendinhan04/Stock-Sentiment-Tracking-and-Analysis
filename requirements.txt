@@ -1,0 +1,3 @@
+minio
+apache-airflow-providers-apache-spark
+apache-airflow-providers-mongo
