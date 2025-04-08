@@ -74,6 +74,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -288,44 +289,49 @@ services:
   #     airflow-init:
   #       condition: service_completed_successfully
 
-  spark-master:
-    image: bitnami/spark:latest
-    container_name: spark-master
-    environment:
-      - SPARK_MODE=master
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-      - SPARK_MASTER_WEBUI_PORT=8083
-    ports:
-      - "7077:7077"   # Spark master port
-      - "8083:8083"   # Web UI master
-    networks:
-      - airflow
-    volumes:
-      - spark-data:/spark
 
-  spark-worker:
-    image: bitnami/spark:latest
-    container_name: spark-worker
-    environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-      - SPARK_WORKER_MEMORY=2G
-      - SPARK_WORKER_CORES=2
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-    depends_on:
-      - spark-master
-    ports:
-      - "8081:8081"   # Web UI worker
-    networks:
-      - airflow
-    volumes:
-      - spark-data:/spark
+# service spark
+  # spark-master:
+  #   image: bitnami/spark:latest
+  #   container_name: spark-master
+  #   environment:
+  #     - SPARK_MODE=master
+  #     - SPARK_RPC_AUTHENTICATION_ENABLED=no
+  #     - SPARK_RPC_ENCRYPTION_ENABLED=no
+  #     - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+  #     - SPARK_SSL_ENABLED=no
+  #     - SPARK_MASTER_WEBUI_PORT=8083
+  #   ports:
+  #     - "7077:7077"   # Spark master port
+  #     - "8083:8083"   # Web UI master
+  #   networks:
+  #     - airflow
+  #   volumes:
+  #     - spark-data:/spark
+
+  # spark-worker:
+  #   image: bitnami/spark:latest
+  #   container_name: spark-worker
+  #   environment:
+  #     - SPARK_MODE=worker
+  #     - SPARK_MASTER_URL=spark://spark-master:7077
+  #     - SPARK_WORKER_MEMORY=2G
+  #     - SPARK_WORKER_CORES=2
+  #     - SPARK_RPC_AUTHENTICATION_ENABLED=no
+  #     - SPARK_RPC_ENCRYPTION_ENABLED=no
+  #     - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+  #     - SPARK_SSL_ENABLED=no
+  #   depends_on:
+  #     - spark-master
+  #   ports:
+  #     - "8081:8081"   # Web UI worker
+  #   networks:
+  #     - airflow
+  #   volumes:
+  #     - spark-data:/spark
+
+
+#service minio
 
   minio: 
     image: quay.io/minio/minio
