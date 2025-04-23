@@ -1,0 +1,12 @@
+mu_clickhouse_project:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: default
+      host: clickhosue     
+      port: 8123
+      user: test_user
+      password: "123"
+      database: default
+      secure: false

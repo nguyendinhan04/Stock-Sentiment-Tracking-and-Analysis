@@ -1,5 +1,9 @@
 minio
-apache-airflow-providers-apache-spark
+# apache-airflow-providers-apache-spark
 apache-airflow-providers-mongo
 polygon==1.2.6
 polygon-api-client
+pandas
+clickhouse_driver
+dbt-core
+dbt-clickhouse

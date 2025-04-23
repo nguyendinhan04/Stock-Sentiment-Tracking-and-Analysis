@@ -74,6 +74,8 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - ${AIRFLOW_PROJ_DIR:-.}/dbt:/opt/airflow/dbt
+    - ${AIRFLOW_PROJ_DIR:-.}/.dbt:/home/airflow/.dbt
 
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -348,10 +350,43 @@ services:
     command: server /data --console-address ":9001"
   
 
+  clickhosue:
+    image: clickhouse/clickhouse-server
+
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse/
+    ports:
+      - 18123:8123
+      - 19000:9000
+      -  19009:9009
+    networks:
+      - airflow
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - clickhosue
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    networks: 
+      - airflow
+    
 volumes:
   postgres-db-volume:
   spark-data:
   minio-data:
+  clickhouse-data:
+  grafana-storage:
+
 
 networks:
   airflow:
