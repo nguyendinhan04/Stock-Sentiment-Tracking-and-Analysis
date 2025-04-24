@@ -37,6 +37,10 @@ def import_news():
     response = requests.get(alpha_vantage_url, params=news_queyry_params)
     json_data = response.json()
     # print(json_data)
+
+    if 'Information' in json_data:
+        print(json_data["Information"])
+        return
     data = json_data["feed"]
 
     cnt = 0

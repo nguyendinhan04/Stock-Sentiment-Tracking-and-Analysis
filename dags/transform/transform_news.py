@@ -54,6 +54,7 @@ def load_news(**kwargs):
 
     df = pd.read_json(StringIO(data),lines = True)
 
+
     # kiem tra xem co source nao moi khong
     source_df = df[["source", "source_domain"]].drop_duplicates(subset = ["source","source_domain"])
     current_source_df = get_table("source_DIM")

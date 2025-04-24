@@ -12,10 +12,10 @@ from transform.transform_news import load_news
 
 
 with DAG('import_news',start_date=datetime(2025,1,1),schedule_interval = '0 15 * * *',catchup=False) as dag: 
-    # import_news = PythonOperator(
-    #     task_id = "import_news",
-    #     python_callable = import_news
-    # )
+    import_news = PythonOperator(
+        task_id = "import_news",
+        python_callable = import_news
+    )
     # import_news
 
     load_news = PythonOperator(
@@ -23,6 +23,6 @@ with DAG('import_news',start_date=datetime(2025,1,1),schedule_interval = '0 15 *
         python_callable = load_news
     )
 
-    load_news
+    # load_news
 
-    # import_news >> load_news
+    import_news >> load_news
