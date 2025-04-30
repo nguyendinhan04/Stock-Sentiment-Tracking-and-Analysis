@@ -181,7 +181,39 @@ def init_table():
             sliding_avg_5 Float64
         ) engine = MergeTree
         ORDER BY date
-        """        
+        """,
+        """
+            create table if not exists news_DIM_hourly(
+            insert_time DateTime,
+            in_time_id UInt32,
+            title String,
+            url String,
+            time_publish_id DateTime,
+            source_id UUID,
+            overall_sentiment_score Double
+        ) engine = MergeTree
+        ORDER BY (insert_time,in_time_id);
+        """,
+
+
+        """
+        create table if not exists new_sentiment_stock_hourly_FACT(
+            insert_time DateTime,
+            in_time_id UInt32,
+            stock_symbol String,
+            sentiment_score Float32
+        ) engine = MergeTree
+        ORDER BY (insert_time,in_time_id,stock_symbol);""",
+
+        """
+            create table if not exists new_sentiment_industry_hourly_FACT
+            (
+            insert_time DateTime,
+            in_time_id UInt32,
+            topic_id UUID,
+            sentiment_score Float32del
+            ) engine = MergeTree
+            ORDER BY (insert_time,in_time_id,topic_id);""",
         ]
 
 

@@ -10,6 +10,9 @@ from PolygonAPI.PolygonBoundary import loadCurrentOHCL
 from transform.transformOHCL_pandas import transform_load_OHCL
 from transform.aggregation_OHCL import aggregate_OHCL
 
+
+
+# '0 3 * * *'
 with DAG('import_to_data_warehouse', start_date=datetime(2025, 1, 1), schedule_interval='0 3 * * *', catchup=False) as dag:
     import_from_polygon = PythonOperator(
         task_id = "import_OHCL_from_polygon",
